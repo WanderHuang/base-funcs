@@ -12,4 +12,12 @@ test('pipe', () => {
 
   expect(pipe(add, double, triple)({a: 4, b: 7})).toBe(66);
 
+  expect(() => {
+    pipe(1, 2)
+  }).toThrow();
+
+  expect(() => {
+    pipe(add, 2)
+  }).toThrow();
+
 });

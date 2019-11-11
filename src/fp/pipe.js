@@ -1,4 +1,5 @@
 import isEqual from './isEqual';
+import isType from './isType';
 
 /**
  * 实现`同步`管道操作，按顺序执行fns。管道的初始值应该为单参数，因为每个函数只会返回一个结果。
@@ -12,6 +13,12 @@ import isEqual from './isEqual';
  * @return {*} 管道最后输出
  */
 export default function pipe(...fns) {
+  fns.forEach(fn => {
+    if (!isType(fn, 'Function')) {
+      throw new Error('parameters should be type of Function');
+    }
+  });
+
   // invoker 应该是单参数，确保pipe管道中只接受一个参数
   return function invoker(params) {
     return fns.reduce((prev, curr) => curr(prev), params);
