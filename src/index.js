@@ -6,7 +6,9 @@ import hasProperty from './fp/hasProperty';
 import reduceProps from './fp/reduceProps';
 import reverseArguments from './fp/reverseArguments';
 import compose from './fp/compose';
-import identity from 'identity';
+import identity from './fp/identity';
+import isFunction from './fp/isFunction';
+import chain from './fp/chain';
 
 export {
   isType,
@@ -17,5 +19,7 @@ export {
   reduceProps,
   reverseArguments,
   compose,
-  identity
+  identity,
+  isFunction,
+  chain
 };
