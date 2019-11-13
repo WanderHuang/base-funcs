@@ -5,6 +5,8 @@ import partial from './fp/partial';
 import hasProperty from './fp/hasProperty';
 import reduceProps from './fp/reduceProps';
 import reverseArguments from './fp/reverseArguments';
+import compose from './fp/compose';
+import identity from 'identity';
 
 export {
   isType,
@@ -13,5 +15,7 @@ export {
   partial,
   hasProperty,
   reduceProps,
-  reverseArguments
+  reverseArguments,
+  compose,
+  identity
 };
