@@ -15,4 +15,9 @@ test('unary', () => {
   expect(parseInt.length).toBe(2);
   expect(list.map(parseInt)).toStrictEqual([1, NaN, NaN]);
   expect(list.map(unary(parseInt))).toStrictEqual([1, 2, 3]);
+
+  // 异常
+  expect(() => unary(1)).toThrowError;
+  expect(() => unary()).toThrowError;
+  expect(() => unary({})).toThrowError;
 })

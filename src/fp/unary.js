@@ -1,3 +1,4 @@
+import isType from './isType';
 /**
  * 一元化。把一个函数变成一元函数，以清除多元函数带来的参数不明的问题。
  *
@@ -15,6 +16,9 @@
  * @return {Function} 一个一元函数
  */
 export default function unary(fn) {
+  if (!isType(fn, 'Function')) {
+    throw new Error('`fn` must be a Function');
+  }
   return function invoker(parameter) {
     return fn(parameter);
   };
