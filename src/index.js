@@ -9,6 +9,7 @@ import compose from './fp/compose';
 import identity from './fp/identity';
 import isFunction from './fp/isFunction';
 import chain from './fp/chain';
+import unary from './fp/unary';
 
 export {
   isType,
@@ -21,5 +22,6 @@ export {
   compose,
   identity,
   isFunction,
-  chain
+  chain,
+  unary
 };
