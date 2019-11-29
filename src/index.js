@@ -10,6 +10,7 @@ import identity from './fp/identity';
 import isFunction from './fp/isFunction';
 import chain from './fp/chain';
 import unary from './fp/unary';
+import debounce from './fp/debounce';
 
 export {
   isType,
@@ -23,5 +24,6 @@ export {
   identity,
   isFunction,
   chain,
-  unary
+  unary,
+  debounce
 };
