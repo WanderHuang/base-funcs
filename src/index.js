@@ -11,6 +11,8 @@ import isFunction from './fp/isFunction';
 import chain from './fp/chain';
 import unary from './fp/unary';
 import debounce from './fp/debounce';
+import isObject from './fp/isObject';
+import findObject from './fp/findObject';
 
 export {
   isType,
@@ -25,5 +27,7 @@ export {
   isFunction,
   chain,
   unary,
-  debounce
+  debounce,
+  isObject,
+  findObject
 };
