@@ -2,7 +2,6 @@ import unary from '../../src/fp/unary';
 import isType from '../../src/fp/isType';
 
 test('unary', () => {
-  
   // 一元
   function secondary(a, b) {
     return a + (isType(b, undefined) || 10);
@@ -20,4 +19,4 @@ test('unary', () => {
   expect(() => unary(1)).toThrowError;
   expect(() => unary()).toThrowError;
   expect(() => unary({})).toThrowError;
-})
+});

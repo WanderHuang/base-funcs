@@ -21,7 +21,7 @@ test('chain', () => {
   const res = sink
     .add(1, 2) // 1 + 2 = 3
     .mult(3) // 3 * 3 = 9
-    .subscribe((res) => res + level) // 9 + 5 = 14
+    .subscribe(res => res + level) // 9 + 5 = 14
     .add(8) // 14 + 8 = 22
     .mult(2) // 22 * 2 = 44
     .subscribe(identity, true);

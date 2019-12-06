@@ -6,6 +6,7 @@
   "scripts": {
     "build": "npm run lint && npm run test && rollup src/index.js --format cjs --file dist/funcs.js",
     "lint": "eslint src",
+    "prettier": "prettier -c --write \"**/*\"",
     "test": "jest"
   },
   "repository": {

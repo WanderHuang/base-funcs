@@ -1,7 +1,6 @@
 import debounce from '../../src/fp/debounce';
 
 describe('debounce test', () => {
-
   test('if no context', () => {
     jest.useFakeTimers();
 
@@ -22,10 +21,9 @@ describe('debounce test', () => {
 
     expect(setTimeout).toHaveBeenCalled();
     expect(setTimeout).toHaveBeenCalledTimes(5);
-  })
+  });
 
   test('with context', function() {
-
     let i = 0;
     let name = null;
     const obj = {
@@ -35,14 +33,14 @@ describe('debounce test', () => {
         name = this.name;
         return this.name;
       }
-    }
+    };
 
     expect(obj.getName()).toBe('wander');
 
     const obj2 = {
       name: 'global',
       getName: obj.getName
-    }
+    };
     expect(obj2.getName()).toBe('global');
 
     expect(i).toBe(2);
@@ -50,15 +48,15 @@ describe('debounce test', () => {
     obj.debouncedGetName = debounce(obj.getName);
     const { debouncedGetName } = obj;
 
-    obj.debouncedGetName()
-    obj.debouncedGetName()
-    obj.debouncedGetName()
+    obj.debouncedGetName();
+    obj.debouncedGetName();
+    obj.debouncedGetName();
 
     setTimeout(() => obj.debouncedGetName(), 400);
 
-    obj.debouncedGetName()
-    obj.debouncedGetName()
-    obj.debouncedGetName()
+    obj.debouncedGetName();
+    obj.debouncedGetName();
+    obj.debouncedGetName();
 
     setTimeout(() => obj.debouncedGetName(), 200);
 
@@ -66,8 +64,5 @@ describe('debounce test', () => {
 
     expect(i).toBe(4);
     expect(name).toBe('wander');
-    
-  })
-})
-
-
+  });
+});

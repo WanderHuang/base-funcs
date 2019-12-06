@@ -4,7 +4,7 @@ test('hasProperty', () => {
   const source = {
     name: 'wander',
     age: 25,
-    sex: 'male',
+    sex: 'male'
   };
   expect(hasProperty(source, 'name')).toBe(true);
   expect(hasProperty(source, 'device')).toBe(false);

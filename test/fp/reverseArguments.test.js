@@ -10,11 +10,11 @@ test('reverseArguments', () => {
   expect(calculator(2, 3)).toBe(31);
   expect(reversed(2, 3)).toBe(17);
 
-  const double = (a) => Math.pow(a, 2)
-  const triple = (a) => Math.pow(a, 3)
+  const double = a => Math.pow(a, 2);
+  const triple = a => Math.pow(a, 3);
 
   const add = (a, b) => a + b;
-  const add1 = partial(add, 1)
+  const add1 = partial(add, 1);
 
   const calc1 = pipe(double, add1, triple);
 
@@ -29,17 +29,17 @@ test('reverseArguments', () => {
   expect(calc2(2)).toBe(81);
 
   // calc3 效果等于 calc1
-  expect((calc1(2))).toBe(calc3(2));
+  expect(calc1(2)).toBe(calc3(2));
 
   // 异常测试
   expect(reverseArguments).toThrowError();
   expect(() => {
-    reverseArguments()
+    reverseArguments();
   }).toThrow();
   expect(() => {
-    reverseArguments(1)
+    reverseArguments(1);
   }).toThrow();
   expect(() => {
-    reverseArguments([])
+    reverseArguments([]);
   }).toThrow();
 });

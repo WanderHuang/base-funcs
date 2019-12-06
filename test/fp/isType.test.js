@@ -1,15 +1,14 @@
 import isType from '../../src/fp/isType';
 
 test('isType', () => {
-
   const types = {
     obj: 'Object',
     func: 'Function',
     bool: 'Boolean',
     str: 'String',
     und: 'Undefined',
-    null: 'Null',
-  }
+    null: 'Null'
+  };
   const obj = {};
   const func = () => {};
   let undef;
